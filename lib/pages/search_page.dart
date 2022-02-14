@@ -14,6 +14,21 @@ class _SearchingState extends State<Searching> {
       appBar: AppBar(
         title: Text('Search A City'),
       ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              contentPadding:
+                  EdgeInsets.symmetric(vertical: 32, horizontal: 24),
+              label: Text('Search'),
+              suffix: Icon(Icons.search),
+              border: OutlineInputBorder(),
+              hintText: 'Enter City Name',
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
