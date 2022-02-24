@@ -8,6 +8,7 @@ class Searching extends StatefulWidget {
 }
 
 class _SearchingState extends State<Searching> {
+  String? cityName;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +19,9 @@ class _SearchingState extends State<Searching> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
+            onSubmitted: (data) {
+              cityName = data;
+            },
             decoration: InputDecoration(
               contentPadding:
                   EdgeInsets.symmetric(vertical: 32, horizontal: 24),
